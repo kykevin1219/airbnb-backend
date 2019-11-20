@@ -38,6 +38,12 @@ class Cities(models.Model):
     class Meta:
         db_table = 'cities'
 
+class Cities(models.Model):
+    city = models.CharField(max_length = 50)
+
+    class Meta:
+        db_table = 'cities'
+
 class Rooms(models.Model):
     title =             models.CharField(max_length = 200)
     person_limit =      models.IntegerField()

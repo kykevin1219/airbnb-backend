@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'account',
     'rooms',
-    'registration'
+    'registration',
+    'reservation',
 ]
 
 MIDDLEWARE = [

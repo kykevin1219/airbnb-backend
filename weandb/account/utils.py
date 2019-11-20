@@ -6,7 +6,7 @@ from .models            import Users
 
 def login_required(func) :
     def wrapper(self, request, *args, **kwargs) :
-        access_token = request.headers['Authorization']
+        access_token = request.headers.get('Authorization', None)
         if access_token is not None :
             try :
                 payload = jwt.decode(access_token, SECRET_KEY, 'HS256')
